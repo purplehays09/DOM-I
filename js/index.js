@@ -48,11 +48,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let nav = document.querySelector('nav');
 
 let navLinks = nav.querySelectorAll('nav a');
+navLinks.forEach(link => link.style.color = 'green')
 // console.log(servicesLinks)
 
 let navLinksText = Object.values(siteContent.nav);
 
 navLinks.forEach((tag,i) =>  tag.textContent = navLinksText[i]);
+
 
 // let servicesLink = nav.querySelector('nav a:nth-of-type(1)')
 // let productLink = nav.querySelector('nav a:nth-of-type(2)')
@@ -126,4 +128,10 @@ ctaImg.setAttribute('src', "img/header-img.png");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // console.log(ctaImg)
+
+
+
+const superHome = "Super Home";
+nav.append(superHome);
+nav.prepend("Not Home");
 
